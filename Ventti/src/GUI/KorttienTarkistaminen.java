@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// Tee olio joka tarkistaa onko kortti jo käytössä. Jos on palauta arvo true. jos ei palauta arvo false.
 package GUI;
 
 /**
@@ -10,5 +6,12 @@ package GUI;
  * @author s1601396
  */
 public class KorttienTarkistaminen {
-    
+ public static void main(String[] args){
+     
+   int kortti;  
+     
+     
+     
+     
+ }   
 }
