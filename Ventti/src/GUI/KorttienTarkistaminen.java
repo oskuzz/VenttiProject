@@ -12,7 +12,7 @@ public class KorttienTarkistaminen {
     static ArrayList<String> cards = new ArrayList<>();
 
     public static boolean cardTest(String card) {
-
+        
         for (int i = 0; i < cards.size(); i++) {
 
             if (cards.get(i).equals(card)) {
