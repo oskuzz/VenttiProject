@@ -12,6 +12,7 @@ package GUI;
 public class GUI extends javax.swing.JFrame {
 
     int kortit = 0;
+    String card;
     String card1;
     String card2;
     String card3;
@@ -156,13 +157,28 @@ public class GUI extends javax.swing.JFrame {
         Stand.setVisible(true);
         Double.setVisible(true);
 
-    }//GEN-LAST:event_PlayActionPerformed
+        card1 = KorttienArvonta.Shuffle();
+        KorttienTarkistaminen.firstCard(card1);
+        Card1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card1 + ".png")));
+        Card1.setVisible(true);
 
+        while (true) {
+            card2 = KorttienArvonta.Shuffle();
+            if (KorttienTarkistaminen.cardTest(card2)) {
+                card2 = KorttienArvonta.Shuffle();
+            } else {
+                Card2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card2 + ".png")));
+                Card2.setVisible(true);
+                break;
+            }
+        }
+    }//GEN-LAST:event_PlayActionPerformed
+//Card8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_4.png")));
     private void HitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HitActionPerformed
         while (true) {
-            card1 = KorttienArvonta.Shuffle();
-            if (KorttienTarkistaminen.cardTest(card1)) {
-                card1 = KorttienArvonta.Shuffle();
+            card = KorttienArvonta.Shuffle();
+            if (KorttienTarkistaminen.cardTest(card)) {
+                card = KorttienArvonta.Shuffle();
             } else {
                 korttienPaikat();
                 System.out.println("Seuraava");
@@ -172,7 +188,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_HitActionPerformed
 
     public void korttienPaikat() {
-        
+
     }
 
     /**
