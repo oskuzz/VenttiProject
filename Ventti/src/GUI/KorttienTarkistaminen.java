@@ -16,11 +16,9 @@ public class KorttienTarkistaminen {
         for (int i = 0; i < cards.size(); i++) {
 
             if (cards.get(i).equals(card)) {
-                System.out.println("Käytetty");
                 return true;
             } else {
                 cards.add(card);
-                System.out.println("Ei ole käytetty");
                 return false;
             }
         }

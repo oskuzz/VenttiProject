@@ -20,6 +20,10 @@ public class KorttienArvonta {
         int gender = showRandomInteger(START, END, random);
         return (gender);
     }
+    
+    public static String Shuffle() {
+        return Integer.toString(ShuffleNum()) + "_" + Integer.toString(ShuffleGender());
+    }
 
     private static int showRandomInteger(int aStart, int aEnd, Random aRandom) {
         long range = (long) aEnd - (long) aStart + 1;

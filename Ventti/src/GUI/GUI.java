@@ -11,6 +11,19 @@ package GUI;
  */
 public class GUI extends javax.swing.JFrame {
 
+    int kortit = 0;
+    String card1;
+    String card2;
+    String card3;
+    String card4;
+    String card5;
+    String card6;
+    String card7;
+    String card8;
+    String card9;
+    String card10;
+    String card11;
+
     /**
      * Creates new form GUI
      */
@@ -20,14 +33,14 @@ public class GUI extends javax.swing.JFrame {
         Hit.setVisible(false);
         Stand.setVisible(false);
         Double.setVisible(false);
-        Card1.setVisible(false);
-        Card2.setVisible(false);
-        Card3.setVisible(false);
-        Card4.setVisible(false);
-        Card5.setVisible(false);
-        Card6.setVisible(false);
-        Card7.setVisible(false);
         Card8.setVisible(false);
+        Card6.setVisible(false);
+        Card4.setVisible(false);
+        Card2.setVisible(false);
+        Card1.setVisible(false);
+        Card3.setVisible(false);
+        Card5.setVisible(false);
+        Card7.setVisible(false);
         Card9.setVisible(false);
         Card10.setVisible(false);
         Card11.setVisible(false);
@@ -42,14 +55,14 @@ public class GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Card1 = new javax.swing.JLabel();
-        Card2 = new javax.swing.JLabel();
-        Card3 = new javax.swing.JLabel();
-        Card4 = new javax.swing.JLabel();
-        Card5 = new javax.swing.JLabel();
-        Card6 = new javax.swing.JLabel();
-        Card7 = new javax.swing.JLabel();
         Card8 = new javax.swing.JLabel();
+        Card6 = new javax.swing.JLabel();
+        Card4 = new javax.swing.JLabel();
+        Card2 = new javax.swing.JLabel();
+        Card1 = new javax.swing.JLabel();
+        Card3 = new javax.swing.JLabel();
+        Card5 = new javax.swing.JLabel();
+        Card7 = new javax.swing.JLabel();
         Card9 = new javax.swing.JLabel();
         Card10 = new javax.swing.JLabel();
         Card11 = new javax.swing.JLabel();
@@ -64,29 +77,29 @@ public class GUI extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Card1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_4.png"))); // NOI18N
-        getContentPane().add(Card1, new org.netbeans.lib.awtextra.AbsoluteConstraints(388, 313, -1, -1));
-
-        Card2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_3.png"))); // NOI18N
-        getContentPane().add(Card2, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 313, -1, -1));
-
-        Card3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_2.png"))); // NOI18N
-        getContentPane().add(Card3, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 313, -1, -1));
-
-        Card4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_1.png"))); // NOI18N
-        getContentPane().add(Card4, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 313, -1, -1));
-
-        Card5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_4.png"))); // NOI18N
-        getContentPane().add(Card5, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 313, -1, -1));
+        Card8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_4.png"))); // NOI18N
+        getContentPane().add(Card8, new org.netbeans.lib.awtextra.AbsoluteConstraints(388, 313, -1, -1));
 
         Card6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_3.png"))); // NOI18N
-        getContentPane().add(Card6, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 313, -1, -1));
+        getContentPane().add(Card6, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 313, -1, -1));
 
-        Card7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_2.png"))); // NOI18N
-        getContentPane().add(Card7, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 313, -1, -1));
+        Card4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_2.png"))); // NOI18N
+        getContentPane().add(Card4, new org.netbeans.lib.awtextra.AbsoluteConstraints(368, 313, -1, -1));
 
-        Card8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_1.png"))); // NOI18N
-        getContentPane().add(Card8, new org.netbeans.lib.awtextra.AbsoluteConstraints(318, 313, -1, -1));
+        Card2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_1.png"))); // NOI18N
+        getContentPane().add(Card2, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 313, -1, -1));
+
+        Card1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_4.png"))); // NOI18N
+        getContentPane().add(Card1, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 313, -1, -1));
+
+        Card3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_3.png"))); // NOI18N
+        getContentPane().add(Card3, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 313, -1, -1));
+
+        Card5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_2.png"))); // NOI18N
+        getContentPane().add(Card5, new org.netbeans.lib.awtextra.AbsoluteConstraints(328, 313, -1, -1));
+
+        Card7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_1.png"))); // NOI18N
+        getContentPane().add(Card7, new org.netbeans.lib.awtextra.AbsoluteConstraints(318, 313, -1, -1));
 
         Card9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_1.png"))); // NOI18N
         getContentPane().add(Card9, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 313, -1, -1));
@@ -118,6 +131,11 @@ public class GUI extends javax.swing.JFrame {
 
         Hit.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         Hit.setText("Hit");
+        Hit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HitActionPerformed(evt);
+            }
+        });
         jPanel1.add(Hit, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 710, 60));
@@ -140,10 +158,21 @@ public class GUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_PlayActionPerformed
 
-    public int kortit() {
-        int kortinArvo = KorttienArvonta.ShuffleNum();
-            
-        return 1;
+    private void HitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HitActionPerformed
+        while (true) {
+            card1 = KorttienArvonta.Shuffle();
+            if (KorttienTarkistaminen.cardTest(card1)) {
+                card1 = KorttienArvonta.Shuffle();
+            } else {
+                korttienPaikat();
+                System.out.println("Seuraava");
+                break;
+            }
+        }
+    }//GEN-LAST:event_HitActionPerformed
+
+    public void korttienPaikat() {
+        
     }
 
     /**

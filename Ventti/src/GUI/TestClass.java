@@ -15,12 +15,7 @@ public class TestClass {
 
     public static void main(String[] args) {
         Scanner lukija = new Scanner(System.in);
-            String kortti = lukija.next();
-            KorttienTarkistaminen.firstCard(kortti);
-        for (int i = 0; i < 5; i++) {
-            kortti = lukija.next();
-
-            System.out.println(KorttienTarkistaminen.cardTest(kortti));
-        }
+            System.out.println(KorttienArvonta.Shuffle());
+        
     }
 }
