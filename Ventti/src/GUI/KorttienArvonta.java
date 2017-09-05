@@ -7,7 +7,7 @@ import java.util.Random;
 
 
 public class KorttienArvonta {
-    public static int Shufflenum() {
+    public static int ShuffleNum() {
         int START = 1;
         int END = 13; 
         Random random = new Random();
