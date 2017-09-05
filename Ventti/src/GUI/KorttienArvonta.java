@@ -7,6 +7,13 @@ import java.util.Random;
 
 
 public class KorttienArvonta {
+    public static int ShuffleNum() {
+        int START = 1;
+        int END = 13; 
+        Random random = new Random();
+        int number = showRandomInteger(START, END, random);
+        return(number);
+    }
     
     private static int showRandomInteger(int aStart, int aEnd, Random aRandom) {
         long range = (long) aEnd - (long) aStart + 1;
