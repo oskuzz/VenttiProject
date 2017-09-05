@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+//Tee 2 oliota jotka arpovat luvut 1 ja 13 väliltä ja toisessa 1-4 väliltä.
+
 package GUI;
 
-/**
- *
- * @author s1601396
- */
+
 public class KorttienArvonta {
     
 }
