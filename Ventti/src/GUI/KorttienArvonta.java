@@ -3,7 +3,15 @@
 
 package GUI;
 
+import java.util.Random;
+
 
 public class KorttienArvonta {
     
+    private static int showRandomInteger(int aStart, int aEnd, Random aRandom) {
+        long range = (long) aEnd - (long) aStart + 1;
+        long fraction = (long) (range * aRandom.nextDouble());
+        int randomNumber = (int) (fraction + aStart);
+        return (randomNumber);
+    }
 }
