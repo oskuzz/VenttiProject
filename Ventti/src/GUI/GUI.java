@@ -16,7 +16,7 @@ public class GUI extends javax.swing.JFrame {
      */
     public GUI() {
         initComponents();
-        
+
         Hit.setVisible(false);
         Stand.setVisible(false);
         Double.setVisible(false);
@@ -137,8 +137,14 @@ public class GUI extends javax.swing.JFrame {
         Hit.setVisible(true);
         Stand.setVisible(true);
         Double.setVisible(true);
-        
+
     }//GEN-LAST:event_PlayActionPerformed
+
+    public int kortit() {
+        int kortinArvo = KorttienArvonta.ShuffleNum();
+            
+        return 1;
+    }
 
     /**
      * @param args the command line arguments
