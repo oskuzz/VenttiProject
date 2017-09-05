@@ -9,19 +9,25 @@ import java.util.ArrayList;
  */
 public class KorttienTarkistaminen {
 
-    public static boolean cardTest(String card) {
-        ArrayList<String> cards = new ArrayList<>();
+    static ArrayList<String> cards = new ArrayList<>();
 
-        if (!cards.isEmpty()) {
-            for (int i = 0; i < cards.size(); i++) {
-                
-                if(cards.get(i).equals(card)) {
-                    return true;
-                } else {
-                    return false;
-                }
+    public static boolean cardTest(String card) {
+
+        for (int i = 0; i < cards.size(); i++) {
+
+            if (cards.get(i).equals(card)) {
+                System.out.println("Käytetty");
+                return true;
+            } else {
+                cards.add(card);
+                System.out.println("Ei ole käytetty");
+                return false;
             }
         }
         return false;
+    }
+    
+    public static void firstCard(String card){
+        cards.add(card);
     }
 }
