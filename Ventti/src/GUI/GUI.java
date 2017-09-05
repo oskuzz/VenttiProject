@@ -16,6 +16,10 @@ public class GUI extends javax.swing.JFrame {
      */
     public GUI() {
         initComponents();
+        
+        Hit.setVisible(false);
+        Stand.setVisible(false);
+        Double.setVisible(false);
     }
 
     /**
@@ -38,6 +42,11 @@ public class GUI extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        Play = new javax.swing.JButton();
+        Double = new javax.swing.JButton();
+        Stand = new javax.swing.JButton();
+        Hit = new javax.swing.JButton();
         Table = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
@@ -77,6 +86,31 @@ public class GUI extends javax.swing.JFrame {
         jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_3.png"))); // NOI18N
         getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 313, -1, -1));
 
+        jPanel1.setOpaque(false);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Play.setText("Play");
+        Play.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlayActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Play, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, -1, -1));
+
+        Double.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        Double.setText("Double");
+        jPanel1.add(Double, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, -1, -1));
+
+        Stand.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        Stand.setText("Stand");
+        jPanel1.add(Stand, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, -1, -1));
+
+        Hit.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        Hit.setText("Hit");
+        jPanel1.add(Hit, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 710, 60));
+
         Table.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/table.png"))); // NOI18N
         getContentPane().add(Table, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
 
@@ -86,6 +120,14 @@ public class GUI extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(727, 520));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayActionPerformed
+        Play.setVisible(false);
+        Hit.setVisible(true);
+        Stand.setVisible(true);
+        Double.setVisible(true);
+        
+    }//GEN-LAST:event_PlayActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,6 +166,10 @@ public class GUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
+    private javax.swing.JButton Double;
+    private javax.swing.JButton Hit;
+    private javax.swing.JButton Play;
+    private javax.swing.JButton Stand;
     private javax.swing.JLabel Table;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -136,5 +182,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
