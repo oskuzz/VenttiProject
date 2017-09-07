@@ -3,6 +3,7 @@ package GUI;
 
 import java.util.ArrayList;
 
+
 /**
  *
  * @author s1601396
@@ -10,22 +11,36 @@ import java.util.ArrayList;
 public class KorttienTarkistaminen {
 
     static ArrayList<String> cards = new ArrayList<>();
+    static int luku = 0;
+    static boolean olemassaoleva = false;
 
-    public static boolean cardTest(String card) {
-        
+    public static int cardTest(String card) {
+        System.out.println("Tarkasteltava kortti: " + card);
+        cards.add("1_1");
+        luku++;
         for (int i = 0; i < cards.size(); i++) {
 
-            if (cards.get(i).equals(card)) {
-                return true;
-            } else {
+            if (!card.equals(cards.get(i))) {
+                System.out.println("Done!");
                 cards.add(card);
-                return false;
+                olemassaoleva = false;
+                break;
+            } else {
+                System.out.println("Not Done!");
+                olemassaoleva = true;
+                break;
             }
         }
-        return false;
+        if (olemassaoleva) {
+            return 1;
+        } else if (!olemassaoleva) {
+            return 0;
+        }
+        return 0;
     }
-    
-    public static void firstCard(String card){
+
+    public static void firstCard(String card) {
+        System.out.println("Ensimmäinen kortti: " + card);
         cards.add(card);
     }
 }

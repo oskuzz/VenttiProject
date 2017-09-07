@@ -13,23 +13,18 @@ import java.util.Scanner;
  */
 public class TestClass {
 
-    static String card1 = "";
-    static String card2 = "";
+    static String card = "";
+    static int kortit = 0;
 
     public static void main(String[] args) {
         Scanner lukija = new Scanner(System.in);
-        card1 = KorttienArvonta.Shuffle();
-        KorttienTarkistaminen.firstCard(card1);
-        for (int i = 0; i < 11; i++) {
-            while (true) {
-                card2 = KorttienArvonta.Shuffle();
-                if (!KorttienTarkistaminen.cardTest(card2)) {
-                    System.out.println(card2);
-                    break;
+        while (true) {
+            System.out.println(kortit);
+            card = lukija.next();
 
-                }
+            if (KorttienTarkistaminen.cardTest(card) == 0) {
+                kortit++;
             }
         }
-
     }
 }
