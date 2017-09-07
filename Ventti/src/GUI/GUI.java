@@ -76,6 +76,7 @@ public class GUI extends javax.swing.JFrame {
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setOpaque(false);
@@ -129,6 +130,11 @@ public class GUI extends javax.swing.JFrame {
 
         Double.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         Double.setText("Double");
+        Double.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DoubleActionPerformed(evt);
+            }
+        });
         jPanel1.add(Double, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, -1, -1));
 
         Stand.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
@@ -169,7 +175,7 @@ public class GUI extends javax.swing.JFrame {
 
         while (true) {
             card2 = KorttienArvonta.Shuffle();
-            
+
             if (KorttienTarkistaminen.cardTest(2, card2) == 0) {
 
                 Card2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card2 + ".png")));
@@ -186,6 +192,46 @@ public class GUI extends javax.swing.JFrame {
             break;
         }
     }//GEN-LAST:event_HitActionPerformed
+
+    private void DoubleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoubleActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_DoubleActionPerformed
+
+    public void reset() {
+        kortit = 2;
+        card1 = "";
+        card2 = "";
+        card3 = "";
+        card4 = "";
+        card5 = "";
+        card6 = "";
+        card7 = "";
+        card8 = "";
+        card9 = "";
+        card10 = "";
+        card11 = "";
+
+        KorttienTarkistaminen.reset();
+
+        Play.setVisible(true);
+        Hit.setVisible(false);
+        Stand.setVisible(false);
+        Double.setVisible(false);
+        Card8.setVisible(false);
+        Card6.setVisible(false);
+        Card4.setVisible(false);
+        Card2.setVisible(false);
+        Card1.setVisible(false);
+        Card3.setVisible(false);
+        Card5.setVisible(false);
+        Card7.setVisible(false);
+        Card9.setVisible(false);
+        Card10.setVisible(false);
+        Card11.setVisible(false);
+        jPanel2.add(Card2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 13, -1, -1));
+        jPanel2.add(Card1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 13, -1, -1));
+    }
 
     public void korttienPaikat() {
         switch (kortit) {
