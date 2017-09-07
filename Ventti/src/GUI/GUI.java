@@ -186,16 +186,16 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_PlayActionPerformed
 //Card8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_4.png")));
     private void HitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HitActionPerformed
-        while (true) {
-            kortit++;
-            korttienPaikat();
-            break;
-        }
+        kortit++;
+        korttienPaikat();
     }//GEN-LAST:event_HitActionPerformed
 
     private void DoubleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoubleActionPerformed
         // TODO add your handling code here:
-        
+        for (int i = 0; i < 2; i++) {
+            kortit++;
+            korttienPaikat();
+        }
     }//GEN-LAST:event_DoubleActionPerformed
 
     public void reset() {
