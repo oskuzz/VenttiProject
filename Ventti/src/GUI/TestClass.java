@@ -18,13 +18,6 @@ public class TestClass {
 
     public static void main(String[] args) {
         Scanner lukija = new Scanner(System.in);
-        while (true) {
-            System.out.println(kortit);
-            card = lukija.next();
 
-            if (KorttienTarkistaminen.cardTest(card) == 0) {
-                kortit++;
-            }
-        }
     }
 }
