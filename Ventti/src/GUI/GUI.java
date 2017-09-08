@@ -23,7 +23,7 @@ public class GUI extends javax.swing.JFrame {
     String card9 = "";
     String card10 = "";
     String card11 = "";
-    
+    //moi
     int Dkortit = 2;
     String Dcard1 = "";
     String Dcard2 = "";
@@ -36,14 +36,13 @@ public class GUI extends javax.swing.JFrame {
     String Dcard9 = "";
     String Dcard10 = "";
     String Dcard11 = "";
-    
 
     /**
      * Creates new form GUI
      */
     public GUI() {
         initComponents();
-
+        jPanel3.setVisible(false);
         Hit.setVisible(false);
         Stand.setVisible(false);
         Double.setVisible(false);
@@ -81,6 +80,7 @@ public class GUI extends javax.swing.JFrame {
         Card17 = new javax.swing.JLabel();
         Card18 = new javax.swing.JLabel();
         Card19 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         Card11 = new javax.swing.JLabel();
         Card10 = new javax.swing.JLabel();
@@ -142,6 +142,10 @@ public class GUI extends javax.swing.JFrame {
         jPanel3.add(Card19, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 200, 90));
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 0, 30)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, -1, -1));
 
         jPanel2.setOpaque(false);
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -236,6 +240,7 @@ public class GUI extends javax.swing.JFrame {
         KorttienTarkistaminen.cardTest(1, card1);
         Card1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card1 + ".png")));
         Card1.setVisible(true);
+        PisteidenLasku.pisteet(card1);
 
         while (true) {
             card2 = KorttienArvonta.Shuffle();
@@ -244,6 +249,8 @@ public class GUI extends javax.swing.JFrame {
 
                 Card2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card2 + ".png")));
                 Card2.setVisible(true);
+                PisteidenLasku.pisteet(card2);
+
                 break;
             }
         }
@@ -253,6 +260,10 @@ public class GUI extends javax.swing.JFrame {
         kortit++;
         korttienPaikat();
     }//GEN-LAST:event_HitActionPerformed
+
+    public static void pisteet(int luku) {
+        jLabel1.setText(Integer.toString(luku));
+    }
 
     private void DoubleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoubleActionPerformed
         // TODO add your handling code here:
@@ -473,7 +484,7 @@ public class GUI extends javax.swing.JFrame {
                 break;
         }
     }
-    
+
     public void dealerKortit() {
         switch (kortit) {
             case 3:
@@ -650,6 +661,7 @@ public class GUI extends javax.swing.JFrame {
                 break;
         }
     }
+
     /**
      * @param args the command line arguments
      */
@@ -657,7 +669,7 @@ public class GUI extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -714,6 +726,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton Play;
     private javax.swing.JButton Stand;
     private javax.swing.JLabel Table;
+    private static javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

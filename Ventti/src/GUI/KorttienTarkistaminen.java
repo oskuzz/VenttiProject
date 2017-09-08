@@ -1,8 +1,6 @@
 // Tee olio joka tarkistaa onko kortti jo käytössä. Jos on palauta arvo true. jos ei palauta arvo false.
 package GUI;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author s1601396
@@ -200,8 +198,8 @@ public class KorttienTarkistaminen {
         }
         return 0;
     }
-    
-    public static void reset(){
+
+    public static void reset() {
         card1 = "";
         card2 = "";
         card3 = "";
