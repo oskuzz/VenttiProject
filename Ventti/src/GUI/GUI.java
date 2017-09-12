@@ -329,7 +329,7 @@ public class GUI extends javax.swing.JFrame {
         card9 = "";
         card10 = "";
         card11 = "";
-        
+
         jLabel1.setText("");
         PisteidenLasku.reset();
 

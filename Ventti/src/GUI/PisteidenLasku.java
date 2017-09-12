@@ -1,4 +1,3 @@
-
 package GUI;
 
 /**
@@ -14,13 +13,13 @@ public class PisteidenLasku {
         GUI.pisteet(kokonaisPisteet);
         if (kokonaisPisteet > 21) {
             GUI.stand();
-        } else if(kokonaisPisteet == 24) {
+        } else if (kokonaisPisteet == 24) {
             System.out.println("Ventti");
             GUI.stand();
         }
     }
-    
-    public static void reset(){
+
+    public static void reset() {
         kokonaisPisteet = 0;
     }
 }

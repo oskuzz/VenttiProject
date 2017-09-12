@@ -1,10 +1,11 @@
-
 package GUI;
 
 import java.util.Random;
 
 public class KorttienArvonta {
+
     static int number;
+
     public static int ShuffleNum() {
         int START = 1;
         int END = 13;
@@ -20,7 +21,7 @@ public class KorttienArvonta {
         int gender = showRandomInteger(START, END, random);
         return (gender);
     }
-    
+
     public static String Shuffle() {
         return Integer.toString(ShuffleNum()) + "_" + Integer.toString(ShuffleGender());
     }
@@ -31,9 +32,9 @@ public class KorttienArvonta {
         int randomNumber = (int) (fraction + aStart);
         return (randomNumber);
     }
-    
+
     public static void pisteet() {
         PisteidenLasku.pisteet(number);
-        
+
     }
 }

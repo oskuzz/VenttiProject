@@ -10,5 +10,5 @@ package GUI;
  * @author s1601396
  */
 public class Bot_CardTest {
-    
+
 }
