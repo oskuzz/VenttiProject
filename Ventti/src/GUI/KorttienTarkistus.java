@@ -4,7 +4,7 @@ package GUI;
  *
  * @author s1601396
  */
-public class KorttienTarkistaminen {
+public class KorttienTarkistus {
 
     static String card1 = "";
     static String card2 = "";
@@ -17,17 +17,7 @@ public class KorttienTarkistaminen {
     static String card9 = "";
     static String card10 = "";
     static String card11 = "";
-    static String Dcard1 = "";
-    static String Dcard2 = "";
-    static String Dcard3 = "";
-    static String Dcard4 = "";
-    static String Dcard5 = "";
-    static String Dcard6 = "";
-    static String Dcard7 = "";
-    static String Dcard8 = "";
-    static String Dcard9 = "";
-    static String Dcard10 = "";
-    static String Dcard11 = "";
+    
 
     public static int cardTest(int Card, String card) {
         switch (Card) {
