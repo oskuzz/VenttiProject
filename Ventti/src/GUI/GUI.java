@@ -95,14 +95,15 @@ public class GUI extends javax.swing.JFrame {
         Card2 = new javax.swing.JLabel();
         Card1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        Play = new javax.swing.JButton();
         Double = new javax.swing.JButton();
         Stand = new javax.swing.JButton();
         Hit = new javax.swing.JButton();
+        Play = new javax.swing.JToggleButton();
         Table = new javax.swing.JLabel();
         Background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Ventti");
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -189,14 +190,6 @@ public class GUI extends javax.swing.JFrame {
         jPanel1.setOpaque(false);
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Play.setText("Play");
-        Play.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PlayActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Play, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 30, -1, -1));
-
         Double.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         Double.setText("Double");
         Double.addActionListener(new java.awt.event.ActionListener() {
@@ -224,6 +217,15 @@ public class GUI extends javax.swing.JFrame {
         });
         jPanel1.add(Hit, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, -1, -1));
 
+        Play.setFont(new java.awt.Font("Dialog", 0, 15)); // NOI18N
+        Play.setText("Play");
+        Play.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PlayActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Play, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 28, -1, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 710, 60));
 
         Table.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/table.png"))); // NOI18N
@@ -235,33 +237,6 @@ public class GUI extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(727, 520));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayActionPerformed
-        Play.setVisible(false);
-        Hit.setVisible(true);
-        Stand.setVisible(true);
-        Double.setVisible(true);
-
-        card1 = KorttienArvonta.Shuffle();
-        KorttienTarkistaminen.cardTest(1, card1);
-        KorttienArvonta.pisteet();
-
-        Card1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card1 + ".png")));
-        Card1.setVisible(true);
-
-        while (true) {
-            card2 = KorttienArvonta.Shuffle();
-
-            if (KorttienTarkistaminen.cardTest(2, card2) == 0) {
-                KorttienArvonta.pisteet();
-
-                Card2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card2 + ".png")));
-                Card2.setVisible(true);
-
-                break;
-            }
-        }
-    }//GEN-LAST:event_PlayActionPerformed
 
     private void HitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HitActionPerformed
         if (stay) {
@@ -292,16 +267,54 @@ public class GUI extends javax.swing.JFrame {
         Double.setVisible(false);
         Stand.setVisible(false);
         Hit.setVisible(false);
+        bot();
+        Play.setVisible(true);
     }
-    
 
-    public void bot() {
-
+    public static void bot() {
+        System.out.println("Emännän vuoro");
     }
     private void StandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StandActionPerformed
         stay = true;
         stand();
+        bot();
     }//GEN-LAST:event_StandActionPerformed
+
+    private void PlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PlayActionPerformed
+        // TODO add your handling code here:
+        if (Play.isSelected()) {
+            jPanel1.add(Play, new org.netbeans.lib.awtextra.AbsoluteConstraints(645, 28, -1, -1));
+            Play.setText("Reset");
+            Play.setVisible(false);
+            Hit.setVisible(true);
+            Stand.setVisible(true);
+            Double.setVisible(true);
+
+            card1 = KorttienArvonta.Shuffle();
+            KorttienTarkistaminen.cardTest(1, card1);
+            KorttienArvonta.pisteet();
+
+            Card1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card1 + ".png")));
+            Card1.setVisible(true);
+
+            while (true) {
+                card2 = KorttienArvonta.Shuffle();
+
+                if (KorttienTarkistaminen.cardTest(2, card2) == 0) {
+                    KorttienArvonta.pisteet();
+
+                    Card2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card2 + ".png")));
+                    Card2.setVisible(true);
+
+                    break;
+                }
+            }
+        } else {
+            jPanel1.add(Play, new org.netbeans.lib.awtextra.AbsoluteConstraints(648, 28, -1, -1));
+            Play.setText("Play");
+            reset();
+        }
+    }//GEN-LAST:event_PlayActionPerformed
 
     public void reset() {
         kortit = 2;
@@ -316,6 +329,9 @@ public class GUI extends javax.swing.JFrame {
         card9 = "";
         card10 = "";
         card11 = "";
+        
+        jLabel1.setText("");
+        PisteidenLasku.reset();
 
         KorttienTarkistaminen.reset();
 
@@ -770,7 +786,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel Card9;
     private static javax.swing.JButton Double;
     private static javax.swing.JButton Hit;
-    private javax.swing.JButton Play;
+    private static javax.swing.JToggleButton Play;
     private static javax.swing.JButton Stand;
     private javax.swing.JLabel Table;
     private static javax.swing.JLabel jLabel1;
