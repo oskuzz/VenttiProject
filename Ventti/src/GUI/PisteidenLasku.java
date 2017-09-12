@@ -12,5 +12,8 @@ public class PisteidenLasku {
     public static void pisteet(int kortti) {
         kokonaisPisteet = kokonaisPisteet + kortti;
         GUI.pisteet(kokonaisPisteet);
+        if (kokonaisPisteet > 21) {
+            GUI.stand();
+        }
     }
 }

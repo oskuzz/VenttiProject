@@ -244,6 +244,8 @@ public class GUI extends javax.swing.JFrame {
 
         card1 = KorttienArvonta.Shuffle();
         KorttienTarkistaminen.cardTest(1, card1);
+        KorttienArvonta.pisteet();
+
         Card1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card1 + ".png")));
         Card1.setVisible(true);
 
@@ -251,6 +253,7 @@ public class GUI extends javax.swing.JFrame {
             card2 = KorttienArvonta.Shuffle();
 
             if (KorttienTarkistaminen.cardTest(2, card2) == 0) {
+                KorttienArvonta.pisteet();
 
                 Card2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card2 + ".png")));
                 Card2.setVisible(true);
@@ -285,11 +288,12 @@ public class GUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_DoubleActionPerformed
 
-    public void stand() {
+    public static void stand() {
         Double.setVisible(false);
         Stand.setVisible(false);
         Hit.setVisible(false);
     }
+    
 
     public void bot() {
 
@@ -342,6 +346,7 @@ public class GUI extends javax.swing.JFrame {
                     System.out.println(card3);
 
                     if (KorttienTarkistaminen.cardTest(3, card3) == 0) {
+                        KorttienArvonta.pisteet();
                         Card3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card3 + ".png")));
                         jPanel2.add(Card3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 13, -1, -1));
                         jPanel2.add(Card2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 13, -1, -1));
@@ -357,6 +362,8 @@ public class GUI extends javax.swing.JFrame {
                     System.out.println(card4);
 
                     if (KorttienTarkistaminen.cardTest(4, card4) == 0) {
+                        KorttienArvonta.pisteet();
+
                         Card4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card4 + ".png")));
                         jPanel2.add(Card4, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 13, -1, -1));
                         jPanel2.add(Card3, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 13, -1, -1));
@@ -373,6 +380,8 @@ public class GUI extends javax.swing.JFrame {
                     System.out.println(card5);
 
                     if (KorttienTarkistaminen.cardTest(5, card5) == 0) {
+                        KorttienArvonta.pisteet();
+
                         Card5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card5 + ".png")));
                         jPanel2.add(Card5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 13, -1, -1));
                         jPanel2.add(Card4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 13, -1, -1));
@@ -390,6 +399,8 @@ public class GUI extends javax.swing.JFrame {
                     System.out.println(card6);
 
                     if (KorttienTarkistaminen.cardTest(6, card6) == 0) {
+                        KorttienArvonta.pisteet();
+
                         Card6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card6 + ".png")));
                         jPanel2.add(Card6, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 13, -1, -1));
                         jPanel2.add(Card5, new org.netbeans.lib.awtextra.AbsoluteConstraints(85, 13, -1, -1));
@@ -408,6 +419,8 @@ public class GUI extends javax.swing.JFrame {
                     System.out.println(card7);
 
                     if (KorttienTarkistaminen.cardTest(7, card7) == 0) {
+                        KorttienArvonta.pisteet();
+
                         Card7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card7 + ".png")));
                         jPanel2.add(Card7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 13, -1, -1));
                         jPanel2.add(Card6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 13, -1, -1));
@@ -427,6 +440,8 @@ public class GUI extends javax.swing.JFrame {
                     System.out.println(card8);
 
                     if (KorttienTarkistaminen.cardTest(8, card8) == 0) {
+                        KorttienArvonta.pisteet();
+
                         Card8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card8 + ".png")));
                         jPanel2.add(Card8, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 13, -1, -1));
                         jPanel2.add(Card7, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 13, -1, -1));
@@ -447,6 +462,8 @@ public class GUI extends javax.swing.JFrame {
                     System.out.println(card9);
 
                     if (KorttienTarkistaminen.cardTest(9, card9) == 0) {
+                        KorttienArvonta.pisteet();
+
                         Card9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card9 + ".png")));
                         jPanel2.add(Card9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 13, -1, -1));
                         jPanel2.add(Card8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 13, -1, -1));
@@ -468,6 +485,8 @@ public class GUI extends javax.swing.JFrame {
                     System.out.println(card10);
 
                     if (KorttienTarkistaminen.cardTest(10, card10) == 0) {
+                        KorttienArvonta.pisteet();
+
                         Card10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card10 + ".png")));
                         jPanel2.add(Card10, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 13, -1, -1));
                         jPanel2.add(Card9, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 13, -1, -1));
@@ -489,6 +508,8 @@ public class GUI extends javax.swing.JFrame {
                     card11 = KorttienArvonta.Shuffle();
                     System.out.println(card11);
                     if (KorttienTarkistaminen.cardTest(11, card11) == 0) {
+                        KorttienArvonta.pisteet();
+
                         Card11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card11 + ".png")));
                         jPanel2.add(Card11, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 13, -1, -1));
                         jPanel2.add(Card10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 13, -1, -1));
@@ -747,10 +768,10 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel Card7;
     private javax.swing.JLabel Card8;
     private javax.swing.JLabel Card9;
-    private javax.swing.JButton Double;
-    private javax.swing.JButton Hit;
+    private static javax.swing.JButton Double;
+    private static javax.swing.JButton Hit;
     private javax.swing.JButton Play;
-    private javax.swing.JButton Stand;
+    private static javax.swing.JButton Stand;
     private javax.swing.JLabel Table;
     private static javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
