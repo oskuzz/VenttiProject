@@ -288,8 +288,20 @@ public class GUI extends javax.swing.JFrame {
 
                 break;
             }
-            
-            
+
+        }
+        while (true) {
+            bCard2 = KorttienArvonta.Shuffle();
+
+            if (Bot_CardTest.cardTest(2, bCard2) == 0) {
+                KorttienArvonta.pisteet();
+
+                Card13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + bCard2 + ".png")));
+                Card13.setVisible(true);
+
+                break;
+            }
+
         }
     }
     private void StandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StandActionPerformed
