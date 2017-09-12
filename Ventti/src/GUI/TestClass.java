@@ -18,6 +18,7 @@ public class TestClass {
 
     public static void main(String[] args) {
         Scanner lukija = new Scanner(System.in);
+        PisteidenLasku.pisteet("2_1");
 
     }
 }

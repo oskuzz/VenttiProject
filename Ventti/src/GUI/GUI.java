@@ -11,6 +11,7 @@ package GUI;
  */
 public class GUI extends javax.swing.JFrame {
 
+    boolean stay = false;
     int kortit = 2;
     String card1 = "";
     String card2 = "";
@@ -23,7 +24,7 @@ public class GUI extends javax.swing.JFrame {
     String card9 = "";
     String card10 = "";
     String card11 = "";
-    //moi
+
     int Dkortit = 2;
     String Dcard1 = "";
     String Dcard2 = "";
@@ -207,6 +208,11 @@ public class GUI extends javax.swing.JFrame {
 
         Stand.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
         Stand.setText("Stand");
+        Stand.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                StandActionPerformed(evt);
+            }
+        });
         jPanel1.add(Stand, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 30, -1, -1));
 
         Hit.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
@@ -240,7 +246,6 @@ public class GUI extends javax.swing.JFrame {
         KorttienTarkistaminen.cardTest(1, card1);
         Card1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card1 + ".png")));
         Card1.setVisible(true);
-        PisteidenLasku.pisteet(card1);
 
         while (true) {
             card2 = KorttienArvonta.Shuffle();
@@ -249,16 +254,19 @@ public class GUI extends javax.swing.JFrame {
 
                 Card2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + card2 + ".png")));
                 Card2.setVisible(true);
-                PisteidenLasku.pisteet(card2);
 
                 break;
             }
         }
     }//GEN-LAST:event_PlayActionPerformed
-//Card8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_4.png")));
+
     private void HitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HitActionPerformed
-        kortit++;
-        korttienPaikat();
+        if (stay) {
+            stand();
+        } else {
+            kortit++;
+            korttienPaikat();
+        }
     }//GEN-LAST:event_HitActionPerformed
 
     public static void pisteet(int luku) {
@@ -267,11 +275,29 @@ public class GUI extends javax.swing.JFrame {
 
     private void DoubleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoubleActionPerformed
         // TODO add your handling code here:
-        for (int i = 0; i < 2; i++) {
-            kortit++;
-            korttienPaikat();
+        if (stay) {
+            stand();
+        } else {
+            for (int i = 0; i < 2; i++) {
+                kortit++;
+                korttienPaikat();
+            }
         }
     }//GEN-LAST:event_DoubleActionPerformed
+
+    public void stand() {
+        Double.setVisible(false);
+        Stand.setVisible(false);
+        Hit.setVisible(false);
+    }
+
+    public void bot() {
+
+    }
+    private void StandActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StandActionPerformed
+        stay = true;
+        stand();
+    }//GEN-LAST:event_StandActionPerformed
 
     public void reset() {
         kortit = 2;

@@ -1,4 +1,4 @@
-// Tee olio joka tarkistaa onko kortti jo käytössä. Jos on palauta arvo true. jos ei palauta arvo false.
+
 package GUI;
 
 /**

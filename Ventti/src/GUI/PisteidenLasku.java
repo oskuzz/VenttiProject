@@ -1,4 +1,4 @@
-//Katsotaan viimeisenä
+
 package GUI;
 
 /**
@@ -9,8 +9,8 @@ public class PisteidenLasku {
 
     static int kokonaisPisteet = 0;
 
-    public static void pisteet(String kortti) {
-        
-        GUI.pisteet(kokonaisPisteet = kokonaisPisteet + (kortti.charAt(0)));
+    public static void pisteet(int kortti) {
+        kokonaisPisteet = kokonaisPisteet + kortti;
+        GUI.pisteet(kokonaisPisteet);
     }
 }
