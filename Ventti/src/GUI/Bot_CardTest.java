@@ -5,13 +5,23 @@
  */
 package GUI;
 
-import static GUI.KorttienTarkistus.*;
-
 /**
  *
  * @author s1601396
  */
 public class Bot_CardTest {
+
+    static String card1 = "";
+    static String card2 = "";
+    static String card3 = "";
+    static String card4 = "";
+    static String card5 = "";
+    static String card6 = "";
+    static String card7 = "";
+    static String card8 = "";
+    static String card9 = "";
+    static String card10 = "";
+    static String card11 = "";
 
     static String bCard1 = "";
     static String bCard2 = "";
@@ -25,8 +35,18 @@ public class Bot_CardTest {
     static String bCard10 = "";
     static String bCard11 = "";
 
-    public static void oldCards() {
-
+    public void oldCards(String card1, String card2, String card3, String card4, String card5, String card6, String card7, String card8, String card9, String card10, String card11) {
+        this.card1 = card1;
+        this.card2 = card2;
+        this.card3 = card3;
+        this.card4 = card4;
+        this.card5 = card5;
+        this.card6 = card6;
+        this.card7 = card7;
+        this.card8 = card8;
+        this.card9 = card9;
+        this.card10 = card10;
+        this.card11 = card11;
     }
 
     public static int cardTest(int Card, String card) {

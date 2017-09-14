@@ -17,7 +17,7 @@ public class PisteidenLasku {
         } else if (kokonaisPisteet == 24) {
             System.out.println("Ventti");
             GUI GUI = new GUI();
-            GUI.lost();
+            GUI.Stand.doClick();
         }
     }
 

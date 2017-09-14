@@ -70,11 +70,11 @@ public class GUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel3 = new javax.swing.JPanel();
+        Card12 = new javax.swing.JLabel();
+        Card13 = new javax.swing.JLabel();
         Card22 = new javax.swing.JLabel();
         Card21 = new javax.swing.JLabel();
         Card20 = new javax.swing.JLabel();
-        Card12 = new javax.swing.JLabel();
-        Card13 = new javax.swing.JLabel();
         Card14 = new javax.swing.JLabel();
         Card15 = new javax.swing.JLabel();
         Card16 = new javax.swing.JLabel();
@@ -110,6 +110,12 @@ public class GUI extends javax.swing.JFrame {
         jPanel3.setOpaque(false);
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Card12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_3.png"))); // NOI18N
+        jPanel3.add(Card12, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
+
+        Card13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_4.png"))); // NOI18N
+        jPanel3.add(Card13, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
+
         Card22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_4.png"))); // NOI18N
         jPanel3.add(Card22, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 13, -1, -1));
 
@@ -118,12 +124,6 @@ public class GUI extends javax.swing.JFrame {
 
         Card20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_3.png"))); // NOI18N
         jPanel3.add(Card20, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
-
-        Card12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_3.png"))); // NOI18N
-        jPanel3.add(Card12, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
-
-        Card13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_4.png"))); // NOI18N
-        jPanel3.add(Card13, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
 
         Card14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/10_1.png"))); // NOI18N
         jPanel3.add(Card14, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 100, -1, -1));
@@ -268,22 +268,22 @@ public class GUI extends javax.swing.JFrame {
         Stand.setVisible(false);
         Hit.setVisible(false);
         Play.setVisible(true);
-
-    }
-
-    public void lost() {
-        Stand.doClick();
+        
     }
 
     public void bot() {
+        KorttienTarkistus.returnCards();
+        jPanel3.setVisible(true);
         System.out.println("Emännän vuoro");
         while (true) {
             bCard1 = KorttienArvonta.Shuffle();
 
-            if (Bot_CardTest.cardTest(2, bCard1) == 0) {
+            if (Bot_CardTest.cardTest(1, bCard1) == 0) {
                 KorttienArvonta.pisteet();
-
-                Card12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + bCard1 + ".png")));
+                System.out.println("OK");
+                System.out.println(bCard1);
+                Card22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + bCard1 + ".png")));
+                jPanel3.add(Card22, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 13, -1, -1));
                 Card12.setVisible(true);
 
                 break;
@@ -295,8 +295,10 @@ public class GUI extends javax.swing.JFrame {
 
             if (Bot_CardTest.cardTest(2, bCard2) == 0) {
                 KorttienArvonta.pisteet();
-
-                Card13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + bCard2 + ".png")));
+                System.out.println("OK 2");
+                System.out.println(bCard2);
+                Card21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/" + bCard2 + ".png")));
+                jPanel3.add(Card21, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 13, -1, -1));
                 Card13.setVisible(true);
 
                 break;
@@ -842,7 +844,7 @@ public class GUI extends javax.swing.JFrame {
     private static javax.swing.JButton Double;
     private static javax.swing.JButton Hit;
     private static javax.swing.JToggleButton Play;
-    private static javax.swing.JButton Stand;
+    public static javax.swing.JButton Stand;
     private javax.swing.JLabel Table;
     private static javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;

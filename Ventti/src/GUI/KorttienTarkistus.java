@@ -18,6 +18,11 @@ public class KorttienTarkistus {
     static String card10 = "";
     static String card11 = "";
     
+    public static void returnCards(){
+        Bot_CardTest bot = new Bot_CardTest();
+        bot.oldCards(card1,card2,card3,card4,card5,card6,card7,card8,card9,card10,card11);
+    }
+    
 
     public static int cardTest(int Card, String card) {
         switch (Card) {
