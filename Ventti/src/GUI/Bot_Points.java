@@ -18,7 +18,7 @@ public class Bot_Points {
         GUI.pisteet(kokonaisPisteet, 1);
         if (kokonaisPisteet > 21) {
             GUI.stand();
-        } else if (kokonaisPisteet == 24) {
+        } else if (kokonaisPisteet == 21) {
             System.out.println("Ventti");
             GUI GUI = new GUI();
             GUI.Stand.doClick();
@@ -28,5 +28,9 @@ public class Bot_Points {
     public static void reset() {
         kokonaisPisteet = 0;
         bPisteet = 0;
+    }
+    
+    public static int getPisteet(){
+        return kokonaisPisteet;
     }
 }

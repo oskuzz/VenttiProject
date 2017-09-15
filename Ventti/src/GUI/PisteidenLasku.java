@@ -14,15 +14,21 @@ public class PisteidenLasku {
         GUI.pisteet(kokonaisPisteet, 0);
         if (kokonaisPisteet > 21) {
             GUI.stand();
-        } else if (kokonaisPisteet == 24) {
+        } else if (kokonaisPisteet == 21) {
             System.out.println("Ventti");
             GUI GUI = new GUI();
-            GUI.Stand.doClick();
+            GUI.stand();
+            GUI.bot();
+            
         }
     }
 
     public static void reset() {
         kokonaisPisteet = 0;
         bPisteet = 0;
+    }
+    
+    public static int getPisteet(){
+        return kokonaisPisteet;
     }
 }
