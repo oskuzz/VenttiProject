@@ -271,7 +271,6 @@ public class GUI extends javax.swing.JFrame {
     }
 
     private void DoubleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoubleActionPerformed
-        stand();
         for (int i = 0; i < 2; i++) {
             kortit++;
             korttienPaikat();
@@ -289,7 +288,7 @@ public class GUI extends javax.swing.JFrame {
     public void bot() {
 
         KorttienTarkistus.returnCards();
-        
+
         while (true) {
             bCard1 = KorttienArvonta.Shuffle();
 

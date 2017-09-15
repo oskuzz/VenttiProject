@@ -6,7 +6,6 @@ package GUI;
  */
 public class PisteidenLasku {
 
-    static int bPisteet = 0;
     static int kokonaisPisteet = 0;
 
     public static void pisteet(int kortti) {
@@ -19,16 +18,16 @@ public class PisteidenLasku {
             GUI GUI = new GUI();
             GUI.stand();
             GUI.bot();
-            
+
         }
     }
 
     public static void reset() {
         kokonaisPisteet = 0;
-        bPisteet = 0;
+
     }
-    
-    public static int getPisteet(){
+
+    public static int getPisteet() {
         return kokonaisPisteet;
     }
 }
