@@ -37,4 +37,8 @@ public class KorttienArvonta {
         PisteidenLasku.pisteet(number);
 
     }
+    public static void bPisteet() {
+        Bot_Points.pisteet(number);
+
+    }
 }

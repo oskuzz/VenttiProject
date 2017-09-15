@@ -11,25 +11,13 @@ public class PisteidenLasku {
 
     public static void pisteet(int kortti) {
         kokonaisPisteet = kokonaisPisteet + kortti;
-        GUI.pisteet(kokonaisPisteet);
+        GUI.pisteet(kokonaisPisteet, 0);
         if (kokonaisPisteet > 21) {
             GUI.stand();
         } else if (kokonaisPisteet == 24) {
             System.out.println("Ventti");
             GUI GUI = new GUI();
             GUI.Stand.doClick();
-        }
-    }
-
-    public static void bPisteet(int kortti) {
-        bPisteet = bPisteet + kortti;
-        
-        if (bPisteet > 21) {
-            
-        } else if (bPisteet == 24) {
-            System.out.println("Ventti");
-            GUI GUI = new GUI();
-            
         }
     }
 
